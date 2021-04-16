@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-row>
+    <v-app style="background: #F5F5F5;">
+      <nav-bar /><br><br><br>
+      <!-- <secondnav /> -->
+      <second_nav />
+      <v-main class="px-5">
+        <router-view></router-view>
+      </v-main>
+      <br><br><br>
+      <footer_bar />
+    </v-app>
+  </v-row>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+//  import secondnav from './components/nav2'
+  import NavBar from './components/navBar.vue';
+  import second_nav from './components/Second_Nav/Second_nav';
+  import footer_bar from './components/footer';
+  export default {
+    name: 'App',
 
-#nav {
-  padding: 30px;
-}
+    components: {
+      NavBar,
+      // secondnav,
+      second_nav,
+      footer_bar
+    },
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    data: () => ({
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+    }),
+  };
+</script>

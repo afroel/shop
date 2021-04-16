@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import test from '../components/Second_Nav/test.vue'
+import SellOnAshewa from '../views/pages/SellOnAshewa.vue'
+import SpecialOffer from '../views/pages/SpecialOffer.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,21 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+    {
+    path: '/test',
+    name: 'test',
+    component: test
+  },
+      {
+    path: '/SellOnAshewaSellOnAshewaSellOnAshewa',
+    name: 'SellOnAshewaSellOnAshewa',
+    component: SellOnAshewa
+  },
+      {
+    path: '/SpecialOffer',
+    name: 'SpecialOffer',
+    component: SpecialOffer
   },
   {
     path: '/about',
